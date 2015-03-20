@@ -13,14 +13,14 @@ makeCacheMatrix <- function(x = matrix()) {
   # Cached data of the object, initialized with default values
   y <- NULL # variable to store a matrix
   m <- NULL # variable to store inverse of the given matrix
-  z <- -1; # variable to store inverse caching flag
+  z <- -1 # variable to store inverse caching flag
 
 
   # Functions to store and return data of the cached object
   setmatrix <- function(y) { #set the value of the matrix 
     x <<- y 
     m <<- NULL 
-    z <<- 0; # inverse caching flag set to 0 for a new matrix
+    z <<- 0 # inverse caching flag set to 0 for a new matrix
   } 
   getmatrix <- function()x # return the stored matrix
   setinverse <- function(inv) m <<- inv # set the inverse matrix
